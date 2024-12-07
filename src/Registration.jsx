@@ -45,33 +45,33 @@ const Registration = ()=>{
     return(
         <div className="container">
          {!container?(<form className="card" id='registrationForm' onSubmit={onSubmit}>
-            <label htmlFor="fio">Pasiyentin SAA:</label>
-            <input name="fio" type='text' onChange={onChange} required value={formData.fio}/>
+            <label htmlFor="fio" name="fio">Pasiyentin SAA:</label>
+            <input  id="fio" name="fio" type='text' onChange={onChange} required value={formData.fio}/>
 
-            <label htmlFor="passport">Pasportun seriyası və nömrəsi:</label>
-            <input name="passport"  type="text" required onChange={onChange} value={formData.passport}/>
+            <label htmlFor="passport" name="passport">Pasportun seriyası və nömrəsi:</label>
+            <input  id="passport" name="passport"  type="text" required onChange={onChange} value={formData.passport}/>
 
-            <label htmlFor="sex">Cins:</label>
-            <select name="sex" onChange={onChange} value={formData.sex}>
+            <label htmlFor="sex" name="sex" >Cins:</label>
+            <select  id="sex" name="sex" onChange={onChange} value={formData.sex}>
                 <option value={'Kisi'} >Kisi</option>
                 <option value={'Qadin'} >Qadin</option>
             </select>
 
-            <label htmlFor="yas">Yas:</label>
-            <input type="text" name="yas" required onChange={onChange} value={formData.yas}/>
+            <label htmlFor="yas" name="yas">Yas:</label>
+            <input   id="yas" type="text" name="yas" required onChange={onChange} value={formData.yas}/>
 
-            <label htmlFor="email">Email:</label>
-            <input type="text" required onChange={onChange} name="email" value={formData.email}/>
+            <label htmlFor="email" name="email">Email:</label>
+            <input  id="email" type="text" required onChange={onChange} name="email" value={formData.email}  autoComplete="email"/>
 
-            <label htmlFor="phone">Telefon Nomresi:</label>
-            <input type="text" required onChange={onChange} name="phone" value={formData.phone}/>
+            <label htmlFor="phone" name="phone">Telefon Nomresi:</label>
+            <input  id="phone" type="text" required onChange={onChange} name="phone" value={formData.phone}  autoComplete="phone"/>
 
-            <label htmlFor="sympthoms">Simptomlarin təsviri:</label>
-            <textarea name="sympthoms" rows={'12'} onChange={onChange} value={formData.sympthoms}></textarea>
+            <label htmlFor="sympthoms" name="sympthoms">Simptomlarin təsviri:</label>
+            <textarea  id="sympthoms" name="sympthoms" rows={'12'} onChange={onChange} value={formData.sympthoms}></textarea>
 
             <p>
-                <label htmlFor="comeagain">Təkrar qəbul</label>
-                <input name="comeagain" required type="checkbox" onChange={onChange} checked={formData.comeagain}/>
+                <label htmlFor="comeagain" name="comeagain">Təkrar qəbul</label>
+                <input  id="comeagain" name="comeagain" required type="checkbox" onChange={onChange} checked={formData.comeagain}/>
             </p>
 
             <button type="submit">Gonder</button>
